@@ -5,6 +5,7 @@ import java.util.function.Function;
 import java.util.stream.*;
 
 public class SequenceHelper {
+	private SequenceHelper() { }
 	/**
 	 * Finds and returns a collection of T where T property values
 	 *  occured specified amount of times in the collection

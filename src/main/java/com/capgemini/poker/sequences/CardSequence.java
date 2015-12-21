@@ -1,6 +1,6 @@
 package com.capgemini.poker.sequences;
 
-import static com.capgemini.poker.helpers.SequenceHelper.reduceToSortedSetByProperty;
+import com.capgemini.poker.helpers.SequenceHelper;
 
 import java.util.SortedSet;
 
@@ -17,8 +17,8 @@ public class CardSequence implements Sequence {
 
 	@Override
 	public int sequenceStrength() {
-		SortedSet<Integer> cardRanksSorted = reduceToSortedSetByProperty(cardsInSequence,
-				card -> card.getRank().asInt());
+		SortedSet<Integer> cardRanksSorted = SequenceHelper
+				.reduceToSortedSetByProperty(cardsInSequence,card -> card.getRank().asInt());
 		int multiplier = 1;
 		final int multiplicationFactor = 15;
 		int strength = 0;
